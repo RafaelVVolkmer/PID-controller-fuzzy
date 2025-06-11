@@ -29,11 +29,7 @@
 
 **`v1.0.00.00`**
 
-This library is responsible for implementing a customized dynamic memory allocation system, with a choice between different algorithms and usage strategies — First-Fit, Next-Fit, Best-Fit. It implements a memory alignment system by processor architecture, direct access to the heap memory space through the linking process and, above all, a memory detection system, where every allocation is mapped with its name, size, address in the heap, line, file and function where they were allocated and free flag, being able to access this information and print it on the terminal at any time, during program execution time.
-
-**`v2.0.00.00`**
-
-libmemalloc now features native implementations of memcpy and memset, as well as support for dynamically expanding the heap via brk and sbrk algorithms. A built-in garbage collector is also provided, which you can invoke at your discretion. For improved performance, you might consider running the garbage collector periodically in a dedicated thread; however, this option was not included by default to avoid imposing invasive changes on your application.
+...
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -62,22 +58,7 @@ libmemalloc now features native implementations of memcpy and memset, as well as
 └── README.md
 ```
 
-The libmemalloc repository is structured to separate different aspects of the project clearly:
-
-- **Source Code Organization:**
-The src and inc directories segregate implementation files from interface declarations, promoting modularity and ease of maintenance.
-
-- **Build Outputs:**
-The bin directory holds the compiled binaries, keeping them separate from the source code and preventing clutter in the main project directories.
-
-- **Documentation and Assets:**
-The readme directory contains visual assets that support the project's documentation, enhancing the clarity and professionalism of the project presentation.
-
-- **Configuration and Metadata:**
-Files like .gitignore, .gitattributes, LICENSE, and README.md provide essential information for version control, project licensing, and user guidance, ensuring that the project is well-documented and properly managed.
-
-- **Build Automation:**
-The CMake facilitates an automated and consistent build process, which is crucial for collaboration, continuous integration, and efficient development workflows.
+...
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -101,64 +82,7 @@ The CMake facilitates an automated and consistent build process, which is crucia
 
 # - Build and Use
 
-### 1. Cloning the Repository
-
-Open your terminal and run:
-
-```bash
-git clone https://github.com/RafaelVVolkmer/libmemalloc.git
-cd libmemalloc
-```
-
-### 2. Building with CMake
-
-The project uses CMake to configure the build.
-
-**`For Debug Build:`**
-
-```bash
-mkdir build-debug
-cd build-debug
-cmake -DCMAKE_BUILD_TYPE=Debug ..
-make
-```
-
-**`For Release Build:`**
-
-```bash
-mkdir build-release
-cd build-release
-cmake -DCMAKE_BUILD_TYPE=Release ..
-make
-```
-
-After building, the generated static libraries (.a), object files (.o), and shared libraries (.so) will be located in your respective build directory.
-
-### 3. Building with Docker
-
-A Dockerfile is provided that uses Alpine Linux as the base image in a multi-stage build. It installs build tools (cmake, make, gcc, etc.), builds the project, and then creates a final minimal image containing only the build artifacts.
-
-**`Build the Docker Image:`**
-  
-In the repository root, run:
-
-```bash
-docker build -t libmemalloc-build .
-```
-
-**`Extract the Build Artifacts:`**
-  
-Assuming the Dockerfile copies the final artifacts into a directory (for example, /usr/local/libmemalloc), you can extract them with:
-
-```bash
-docker create --name extract libmemalloc-build
-docker cp extract:/usr/local/libmemalloc ./bin
-docker rm extract
-```
-
-Note: Adjust the path /usr/local/libmemalloc to match the directory specified in your Dockerfile.
-
-<p align="right">(<a href="#readme-top">Back to Top</a>)</p>
+...
 
 ---
 
