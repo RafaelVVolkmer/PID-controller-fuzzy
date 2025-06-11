@@ -38,20 +38,33 @@
 # - Repository tree
 
 ```python
-/libmemalloc
+/PID-controller-fuzzy
 ├── /inc
 │   ├── logs.h
-│   └── libmemalloc.h
+│   └── pid.h
 ├── /src
-│   └── libmemalloc.c
+│   ├── CMakeLists.txt
+│   └── pid.c
+├── /tests
+│   ├── CMakeLists.txt
+│   └── test_pid.c
+├── /build
 ├── /bin
-│   ├── libmemalloc.o
-│   ├── libmemalloc.a
-│   └── libmemalloc.so
+│   ├── /release
+│   │   ├── libpid.o
+│   │   ├── libpid.a
+│   │   ├── libpid.so
+│   │   └── test.o
+│   └── /debug
+│       ├── libpid.o
+│       ├── libpid.a
+│       ├── libpid.so
+│       └── test.o
 ├── /readme
-│    └── libmemalloc.svg
+│    └── LibPid.svg
 ├── Dockerfile
 ├── CMakeLists.txt
+├── build.sh
 ├── .gitattributes
 ├── .gitignore
 ├── LICENSE
